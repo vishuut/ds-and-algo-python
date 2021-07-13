@@ -1,0 +1,43 @@
+The Big O Notation:
+=======================
+
+It helps to mesure the sclability of a code. 
+	-	It tells how long our code can take to execute on a computer.
+	-	OR It tells how the execution time of a program increases with the number of input.
+
+Best Big O case:
+	1. O(log n)
+	2. O(1) - Constant Time -- No matter how the input increases, the number of steps remain the same.
+	
+Fare Big O case:
+	1. O(n) - Linear Increase in execution time (or number of steps performed).
+	
+Average Big O case:
+	1. O(n log n)
+	
+Worst Big O case:
+	1. O(n^2)
+	2. O(2^n)
+	3. O(n!)
+	
+Big O Rule Book (for calculating Big O in interviewes):
+=======================================================
+Rule 1: Worst Case : This rule says that, in Big O, we always care about the worst case.
+
+Rule 2: Remove Constants : While calculating Big O, what ever constant values (or literal) we get, we need to drop all of them from the calculation.
+							For Ex: if the calculation becomes:
+									O(4 + n/2 + 1000) 
+									we will drop all the constants numerical values, (i.e 4, /2 and 100 in this case)
+									so after droping the constants, the calculation now simply becomes:
+									O(n)
+									
+Rule 3: Different terms of inputs : It says that we always need to consider the different inputs. Please refer to program "BigO/compressTwice.py".
+									In that program, the first loop inside compressBoxexTwice depends upon the length of boxes1 while the second loop depends
+									upon length of boxes2. So while calculating the Big O of this function we need to consider both of these inputs.
+									
+									In this case if we consider length of boxes1 as 'a' and length of boxes2 as 'b' then the Big O of the function
+									"compressBoxesTwice()" becomes O(a + b).
+
+Rule 4: Drop Non Dominants
+
+
