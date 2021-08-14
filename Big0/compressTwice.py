@@ -10,3 +10,5 @@ boxes1 = ["box1", "box2", "box3"]
 boxes2 = ["box1", "box2", "box3", "box4", "box5", "box6"]
 
 compressBoxesTwice(boxes1, boxes2)
+
+# the Big O will be O(a + b), where a denotes first input and b denotes second input

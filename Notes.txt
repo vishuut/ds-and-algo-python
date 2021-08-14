@@ -16,9 +16,9 @@ Average Big O case:
 	1. O(n log n)
 	
 Worst Big O case:
-	1. O(n^2)
+	1. O(n^2) - Quadratic Increase : Increase in no of operations will be "No of inputs to the power of 2 (i.e n^2)". Applies for nested loops.
 	2. O(2^n)
-	3. O(n!)
+	3. O(n!) - Factorial Times Increase : Using nested loops for each element of the input we have. (Not so common and its the worst of all)
 	
 Big O Rule Book (for calculating Big O in interviewes):
 =======================================================
@@ -37,7 +37,95 @@ Rule 3: Different terms of inputs : It says that we always need to consider the 
 									
 									In this case if we consider length of boxes1 as 'a' and length of boxes2 as 'b' then the Big O of the function
 									"compressBoxesTwice()" becomes O(a + b).
+									
+									But if both the loops inside the function goes nested, the Big O will become O(a * b)
 
-Rule 4: Drop Non Dominants
+Rule 4: Drop Non Dominants : This rule states that we can drop the non-dominant term in the Big O calculation. Please refer to the 'printNumberAndPairs.py'.
+							The Big O calculation for 'logAllNumbersAndTherePairs()' function will be, O(n) for the first loop and O(n^2) for the second and nested loop. So the total will be:
+							O(n + n^2) 
+							But according to the 4th rule of Big O calculation, we don't need to care for the non-dominanat term, which is O(n) in this case.
+							So we can drop it and the actuall Big O for this function becomes: O(n^2)
+							
+							
+
+What is a good code?
+Ans: A good code is mesured by the following 2 properties:
+		1. Readable
+		2. Scalable
+			- Speed
+			- Memory
+			
+How to solve coding problems?
+==============================
+Good companies look for the following aspects in an interview:
+1. Analytical Skills
+2. Coding Skills
+3. Technical Skills
+4. Communication Skills
+
+
+What are Data Srtructures?
+===========================
+Data Structures are collection of values. The values can have relation among
+themselves or they can have function to be applied on them. They are used to
+organize our data during the runtime of a program. We can put things into them
+and we can take things from them.
+
+Data structures are used based on the current scenerio based on what kind of
+data we have and what kind of functions we want to perform with the data inside
+the data structure.
+
+How Computers Store Data?
+========================================
+- Variables in a program are stored into the ram.
+- Persistent/Permanent data are stored in HD/SSD or drives.
+- CPU's have Caches where it keeps the most recent data that it has accessed
+  from the ram.
+
+Most Important Data Sturctures:
+===================================
+- Arrays        - Trees
+- Stacks        - Tries
+- Queues        - Graphs
+- Linked Lists  - Hash Tables
+
+Most Important Algorithms:
+===================================
+- Sorting
+- Dynamic programming
+- BFS+DFS (Searching)
+- Recursion
+
+Operation on Data Structures:
+===================================
+- Insertion
+- Deletion
+- Traversal
+- Searching
+- Sorting
+- Accessing
+
+Arrays:
+===========
+- A list of Data the Stores data sequentialy in the memory.
+
+Big O for Array Operations:
+===================================
+- Access - O(1)
+- Push - O(1) (Can be O(n) in case of dynamic arrays when we need to expand the memory of array)
+- Insert - O(n)
+- Delete - O(n)
+
+Pros of Array:
+=======================
+# Its the best when we juat need a list of data that we can access data from and iterate throught it.
+# Fetching data based on indexed are super fast.
+
+Cons of Array:
+======================
+# Not good for manipulation because adding element in the start or middle on an array needs other elements to be shifted which takes time.
+# The insertion and deletion of element both needs shifting and it has a Big O of O(n).
+
+
 
 
